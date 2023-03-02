@@ -46,3 +46,19 @@ To Be
         .cornerRadius(20)
         .shadow(radius: 20)
 ```
+
+<img width="234" alt="スクリーンショット 2023-03-02 23 00 18" src="https://user-images.githubusercontent.com/47273077/222449686-dd9abe97-9631-41f8-9cbc-1f81be4d6d07.png">
+
+```swift
+ VStack {
+            Text("App of the day")
+                .font(.title).bold()
+                .foregroundColor(.white)
+                .shadow(radius: 10)
+        }
+        .frame(width: 300, height: 400)
+        .background(Color.pink)
+        .cornerRadius(20)
+        .shadow(color: Color.pink.opacity(0.3), radius: 20, x: 0.0, y: 10.0)
+        .shadow(color: Color.pink.opacity(0.2), radius: 5, x: 0.0, y: 2.0)
+```
