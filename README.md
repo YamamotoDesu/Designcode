@@ -20,9 +20,7 @@ VStack {
 
 To Be
 ```swift
-struct ContentView: View {
-    var body: some View {
-        VStack {
+ VStack {
             Rectangle().fill(Color.blue)
         }
         .overlay(
@@ -32,6 +30,4 @@ struct ContentView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
             .padding()
         )
-    }
-}
 ```
