@@ -62,3 +62,30 @@ To Be
         .shadow(color: Color.pink.opacity(0.3), radius: 20, x: 0.0, y: 10.0)
         .shadow(color: Color.pink.opacity(0.2), radius: 5, x: 0.0, y: 2.0)
 ```
+
+[Mask and Transparency](https://designcode.io/swiftui-handbook-mask-and-transparency)
+
+<img width="233" alt="スクリーンショット 2023-03-03 20 14 22" src="https://user-images.githubusercontent.com/47273077/222706468-4788565c-04df-4788-a021-08d08d0acf45.png">
+
+```swift
+ZStack {
+            Color.blue.ignoresSafeArea()
+
+            VStack {
+                ForEach(0 ..< 5) { item in
+                    Text("Mask and Transparency")
+                        .font(.title3).bold()
+                        .padding(.vertical)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    Divider()
+                }
+            }
+            .frame(height: 300, alignment: .top)
+            .padding()
+            .background(Color.white)
+            ///.mask(Color.black.opacity(0.3))
+            .mask(LinearGradient(gradient: Gradient(colors: [Color.red, Color.red, Color.blue.opacity(0.2)]), startPoint: .top, endPoint: .bottom))
+            .cornerRadius(30)
+            .padding()
+        }
+```
