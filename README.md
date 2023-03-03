@@ -107,3 +107,19 @@ ZStack {
             .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .continuous))
         }
 ```
+
+[Tab View Pagination](https://designcode.io/swiftui-handbook-tab-view-pagination)
+```swift
+        TabView {
+            RoundedRectangle(cornerRadius: 30)
+                .fill(Color.blue)
+                .padding()
+            RoundedRectangle(cornerRadius: 30)
+                .fill(Color.red)
+                .padding()
+            RoundedRectangle(cornerRadius: 30)
+                .fill(Color.purple)
+                .padding()
+        }
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
+```
