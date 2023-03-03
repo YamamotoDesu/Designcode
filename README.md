@@ -89,3 +89,21 @@ ZStack {
             .padding()
         }
 ```
+
+[Clip Shape and Smooth Corners](https://designcode.io/swiftui-handbook-clip-shape)
+
+<img width="171" alt="スクリーンショット 2023-03-03 20 46 06" src="https://user-images.githubusercontent.com/47273077/222712504-fe7812bd-e625-4786-b8d8-f47846d7b8b3.png">
+
+```swift
+ZStack {
+            Color.blue.ignoresSafeArea()
+            
+            VStack {
+                Text("SwiftUI for iOS 14")
+                    .bold()
+            }
+            .frame(width: 300, height: 200)
+            .background(Color.white)
+            .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .continuous))
+        }
+```
