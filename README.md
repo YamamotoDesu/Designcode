@@ -109,7 +109,11 @@ ZStack {
 ```
 
 [Tab View Pagination](https://designcode.io/swiftui-handbook-tab-view-pagination)
+
+<img width="300" alt="スクリーンショット 2023-03-03 21 49 05" src="https://user-images.githubusercontent.com/47273077/222724373-fdc17e51-5d04-4c89-94b9-4613b2747ef5.png">
+
 ```swift
+
         TabView {
             RoundedRectangle(cornerRadius: 30)
                 .fill(Color.blue)
