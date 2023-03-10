@@ -204,4 +204,28 @@ var body: some View {
     }
  ```
 
+[Tap Animation with Delay](https://designcode.io/swiftui-handbook-tap-animation-with-delay)
 
+<img width="300" alt="スクリーンショット 2023-03-03 20 46 06" src="https://user-images.githubusercontent.com/47273077/224252722-c768e795-d612-4383-a56f-cf8519454084.gif">
+
+```swift
+ @State var tap = false
+
+    var body: some View {
+        VStack {
+            Text("View more").foregroundColor(.white)
+        }
+        .frame(width: 200, height: 200)
+        .background(LinearGradient(gradient: Gradient(colors: [Color.purple, Color.blue]), startPoint: .topLeading, endPoint: .bottomTrailing))
+        .mask(RoundedRectangle(cornerRadius: 30))
+        .shadow(color: Color.blue.opacity(tap ? 0.6 : 0.3), radius: tap ? 20 : 10, x:0, y: tap ? 10: 20)
+        .scaleEffect(tap ? 1.2 : 1)
+        .animation(.spring(response: 0.4, dampingFraction: 0.6))
+        .onTapGesture {
+            tap = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                tap = false
+            }
+        }
+    }
+ ```
