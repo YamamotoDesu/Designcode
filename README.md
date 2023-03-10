@@ -139,7 +139,9 @@ ZStack {
 <img width="300" alt="スクリーンショット 2023-03-03 20 46 06" src="https://user-images.githubusercontent.com/47273077/224220019-58c5ffbf-3371-46bf-bc4e-4ce401c29f25.gif">
 
 [Animation Modifier and Timing](https://designcode.io/swiftui-handbook-animation-modifier-and-timing)
+
 <img width="300" alt="スクリーンショット 2023-03-03 20 46 06" src="https://user-images.githubusercontent.com/47273077/224224812-07554296-649e-486c-906a-3ac2ef9272c9.gif">
+
 ```swift
 var body: some View {
         ZStack {
@@ -167,5 +169,39 @@ var body: some View {
         }
   }
 ```
+
+[Transform Animations](https://designcode.io/swiftui-handbook-transform-animations)
+
+<img width="300" alt="スクリーンショット 2023-03-03 20 46 06" src="https://user-images.githubusercontent.com/47273077/224245608-4ff6da7a-67a4-4d9a-9862-82a6c80717f6.gif">
+
+```swift
+    @State var show = false
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 30)
+                .frame(width: 260, height: 200)
+                .offset(y: 20)
+            RoundedRectangle(cornerRadius: 30)
+                .frame(width: 300, height: 200)
+                .foregroundColor(Color.purple)
+                .offset(y: show ? -200 : 0)
+                .scaleEffect(show ? 1.2 : 1)
+                .rotationEffect(Angle(degrees: show ? 30 : 0))
+                .rotation3DEffect(
+                    Angle(degrees: show ? 30 : 0),
+                    axis: (x: 1, y: 0, z: 0),
+                    anchor: .center,
+                    anchorZ: 0.0,
+                    perspective: 1
+                )
+                .onTapGesture {
+                    withAnimation {
+                        show.toggle()
+                    }
+                   
+                }
+        }
+    }
+ ```
 
 
