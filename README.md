@@ -135,4 +135,5 @@ ZStack {
 ## transition(.move(edge: .bottom))
 <img width="300" alt="スクリーンショット 2023-03-03 20 46 06" src="https://user-images.githubusercontent.com/47273077/224218915-3d362c55-87d6-4229-906b-ff6644eb2cf5.gif">
 
-
+## transition(.scale(scale: 0.1, anchor: .bottomTrailing))
+<img width="300" alt="スクリーンショット 2023-03-03 20 46 06" src="https://user-images.githubusercontent.com/47273077/224220019-58c5ffbf-3371-46bf-bc4e-4ce401c29f25.gif">
