@@ -127,3 +127,9 @@ ZStack {
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
 ```
+
+[View Transition](https://designcode.io/swiftui-handbook-view-transition)
+## transition(.slide)
+<img width="300" alt="スクリーンショット 2023-03-03 20 46 06" src="https://user-images.githubusercontent.com/47273077/224218270-1d13ab4f-ad7b-4534-bd77-98d91ed40f41.gif">
+
+
