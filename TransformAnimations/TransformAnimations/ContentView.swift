@@ -28,7 +28,10 @@ struct ContentView: View {
                     perspective: 1
                 )
                 .onTapGesture {
-                    show.toggle()
+                    withAnimation {
+                        show.toggle()
+                    }
+                   
                 }
         }
     }
