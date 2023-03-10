@@ -139,6 +139,7 @@ ZStack {
 <img width="300" alt="スクリーンショット 2023-03-03 20 46 06" src="https://user-images.githubusercontent.com/47273077/224220019-58c5ffbf-3371-46bf-bc4e-4ce401c29f25.gif">
 
 [Animation Modifier and Timing](https://designcode.io/swiftui-handbook-animation-modifier-and-timing)
+
 <img width="300" alt="スクリーンショット 2023-03-03 20 46 06" src="https://user-images.githubusercontent.com/47273077/224224812-07554296-649e-486c-906a-3ac2ef9272c9.gif">
 
 ```swift
@@ -170,6 +171,7 @@ var body: some View {
 ```
 
 [Transform Animations](https://designcode.io/swiftui-handbook-transform-animations)
+
 <img width="300" alt="スクリーンショット 2023-03-03 20 46 06" src="https://user-images.githubusercontent.com/47273077/224245608-4ff6da7a-67a4-4d9a-9862-82a6c80717f6.gif">
 
 ```swift
