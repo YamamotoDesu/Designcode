@@ -19,7 +19,7 @@ struct ContentView: View {
                 RoundedRectangle(cornerRadius: 30)
                     .fill(Color.blue)
                     .padding()
-                    .transition(.slide)
+                    .transition(.scale(scale: 0.1, anchor: .bottomTrailing))
                     .zIndex(1)
             }
         }
