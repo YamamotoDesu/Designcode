@@ -230,8 +230,9 @@ var body: some View {
     }
  ```
  
- Long Press Gesture
- <img width="300" src="https://user-images.githubusercontent.com/47273077/226092057-eebabd94-0e0c-4db0-882a-2a19c9304ad6.gif">
+[Long Press Gesture](https://designcode.io/swiftui-handbook-long-press)
+ 
+<img width="300" src="https://designcode.io/swiftui-handbook-long-press">
 
 ```swift
 struct ContentView: View {
