@@ -229,3 +229,56 @@ var body: some View {
         }
     }
  ```
+ 
+### [Long Press Gesture](https://designcode.io/swiftui-handbook-long-press)
+ 
+<img width="300" src="https://user-images.githubusercontent.com/47273077/226092217-00a33c6c-60ba-49cb-aca1-9fe63ae3abf2.gif">
+
+```swift
+struct ContentView: View {
+    @GestureState var press = false
+    @State var show = false
+    
+    var body: some View {
+        Image(systemName: "camera.fill")
+            .foregroundColor(.white)
+            .frame(width: 60, height: 60)
+            .background(show ? Color.black : Color.blue)
+            .mask(Circle())
+            .scaleEffect(press ? 2 : 1)
+            .animation(.spring())
+            .gesture(
+                LongPressGesture(minimumDuration: 0.6).updating($press) { currentState, gestureState, transaction in
+                    gestureState = currentState
+                }.onEnded { value in
+                    show.toggle()
+                }
+            )
+    }
+}
+```
+ 
+### [Drag Gesture](https://designcode.io/swiftui-handbook-drag-gesture)
+
+<img width="300" src="https://user-images.githubusercontent.com/47273077/226093864-5a9d2a12-0f0b-42d4-898a-7b82116b2719.gif">
+
+```swift
+struct ContentView: View {
+    @State var viewState = CGSize.zero
+    
+    var body: some View {
+        RoundedRectangle(cornerRadius: 20)
+            .fill(Color.blue)
+            .frame(width: 300, height: 400)
+            .offset(x: viewState.width, y: viewState.height)
+            .animation(.spring(response: 0.4, dampingFraction: 0.6))
+            .gesture(
+                DragGesture().onChanged { value in
+                    viewState = value.translation
+                }.onEnded { value in
+                    viewState = .zero
+                }
+            )
+    }
+}
+```
