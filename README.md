@@ -229,3 +229,31 @@ var body: some View {
         }
     }
  ```
+ 
+ Long Press Gesture
+ <img width="300" src="https://user-images.githubusercontent.com/47273077/226092057-eebabd94-0e0c-4db0-882a-2a19c9304ad6.gif">
+
+```swift
+struct ContentView: View {
+    @GestureState var press = false
+    @State var show = false
+    
+    var body: some View {
+        Image(systemName: "camera.fill")
+            .foregroundColor(.white)
+            .frame(width: 60, height: 60)
+            .background(show ? Color.black : Color.blue)
+            .mask(Circle())
+            .scaleEffect(press ? 2 : 1)
+            .animation(.spring())
+            .gesture(
+                LongPressGesture(minimumDuration: 0.6).updating($press) { currentState, gestureState, transaction in
+                    gestureState = currentState
+                }.onEnded { value in
+                    show.toggle()
+                }
+            )
+    }
+}
+```
+ 
