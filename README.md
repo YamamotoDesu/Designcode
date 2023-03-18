@@ -230,7 +230,7 @@ var body: some View {
     }
  ```
  
-## [Long Press Gesture](https://designcode.io/swiftui-handbook-long-press)
+### [Long Press Gesture](https://designcode.io/swiftui-handbook-long-press)
  
 <img width="300" src="https://user-images.githubusercontent.com/47273077/226092217-00a33c6c-60ba-49cb-aca1-9fe63ae3abf2.gif">
 
