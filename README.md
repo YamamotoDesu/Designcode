@@ -258,3 +258,27 @@ struct ContentView: View {
 }
 ```
  
+## [Drag Gesture](https://designcode.io/swiftui-handbook-drag-gesture)
+
+<img width="300" src="https://user-images.githubusercontent.com/47273077/226093864-5a9d2a12-0f0b-42d4-898a-7b82116b2719.gif">
+
+```swift
+struct ContentView: View {
+    @State var viewState = CGSize.zero
+    
+    var body: some View {
+        RoundedRectangle(cornerRadius: 20)
+            .fill(Color.blue)
+            .frame(width: 300, height: 400)
+            .offset(x: viewState.width, y: viewState.height)
+            .animation(.spring(response: 0.4, dampingFraction: 0.6))
+            .gesture(
+                DragGesture().onChanged { value in
+                    viewState = value.translation
+                }.onEnded { value in
+                    viewState = .zero
+                }
+            )
+    }
+}
+```
