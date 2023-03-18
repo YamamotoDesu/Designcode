@@ -258,7 +258,7 @@ struct ContentView: View {
 }
 ```
  
-## [Drag Gesture](https://designcode.io/swiftui-handbook-drag-gesture)
+### [Drag Gesture](https://designcode.io/swiftui-handbook-drag-gesture)
 
 <img width="300" src="https://user-images.githubusercontent.com/47273077/226093864-5a9d2a12-0f0b-42d4-898a-7b82116b2719.gif">
 
