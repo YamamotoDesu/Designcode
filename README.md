@@ -285,7 +285,7 @@ struct ContentView: View {
 
 ### [Matched Geometry Effect](https://designcode.io/swiftui-handbook-matched-geometry-effect)
 
-<img width="300" src="https://user-images.githubusercontent.com/47273077/226093864-5a9d2a12-0f0b-42d4-898a-7b82116b2719.gif">
+<img width="300" src="https://user-images.githubusercontent.com/47273077/226466880-c2edb03b-112b-46c3-bdc9-a2aa5b5536fd.gif">
 
 ```swift
 struct ContentView: View {
