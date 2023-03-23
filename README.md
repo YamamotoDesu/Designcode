@@ -428,6 +428,9 @@ struct PlayView_Previews: PreviewProvider {
 ```
 
 ### [Background Blur](https://designcode.io/swiftui-handbook-background-blur)
+
+<img width="300" alt="スクリーンショット 2023-03-24 8 40 40" src="https://user-images.githubusercontent.com/47273077/227387929-47bea55c-c675-45f7-a788-b9eee8425a0e.png">
+
 ```swift
 
 import SwiftUI
