@@ -637,3 +637,25 @@ struct ContentView: View {
         .frame(height: 400)
     }
  ```
+ 
+ <img width="300" alt="スクリーンショット 2023-04-02 19 47 18" src="https://user-images.githubusercontent.com/47273077/229348217-46408763-b05c-4a02-a558-a005fe5dc465.png">
+
+ ```swift
+ struct ContentView: View {
+    var body: some View {
+        ScrollView {
+            LazyVGrid(columns: [
+                GridItem(.fixed(80), spacing: 16),
+                GridItem(.fixed(160), spacing: 16),
+                GridItem(.fixed(80), spacing: 16),
+            ], spacing: 16) {
+                ForEach(0 ..< 12) { item in
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.blue)
+                        .frame(height: 100)
+                }
+            }
+            .padding()
+        }
+    }
+ ```
