@@ -601,4 +601,39 @@ struct ContentView: View {
     }
 ```
 
+## [Lazy Grid Layout](https://designcode.io/swiftui-handbook-lazy-grid)
 
+<img width="300" alt="スクリーンショット 2023-04-02 19 38 46" src="https://user-images.githubusercontent.com/47273077/229347863-56a545a0-3ab5-4a0c-8f02-4c31d7fdaa0a.png">
+
+ContentView.swift
+```swift
+struct ContentView: View {
+    var body: some View {
+        LazyVGrid(columns: [GridItem(.adaptive(minimum: 80), spacing: 16)], spacing: 16) {
+            ForEach(0 ..< 12) { item in
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(Color.blue)
+                    .frame(height: 100)
+            }
+        }
+        .padding()
+```
+
+<img width="300" alt="スクリーンショット 2023-04-02 19 38 46" src="https://user-images.githubusercontent.com/47273077/229348004-a176f14b-4fde-4639-b178-ab6e107e4873.gif">
+
+```swift
+struct ContentView: View {
+    var body: some View {
+        ScrollView(.horizontal) {
+            LazyHGrid(rows: [GridItem(.adaptive(minimum: 80), spacing: 16)], spacing: 16) {
+                ForEach(0 ..< 12) { item in
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.blue)
+                        .frame(width: 300)
+                }
+            }
+            .padding()
+        }
+        .frame(height: 400)
+    }
+ ```
