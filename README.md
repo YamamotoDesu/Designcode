@@ -555,3 +555,50 @@ struct VisualEffectBlur_Previews: PreviewProvider {
 }
 
 ```
+
+## [Lottie Animation](https://designcode.io/swiftui-handbook-lottie-animation)
+
+<img width="300" alt="スクリーンショット 2023-03-24 8 40 40" src="https://user-images.githubusercontent.com/47273077/229346929-2e6b596a-a122-444f-87d5-559c716281ec.gif">
+
+
+```swift
+import SwiftUI
+import Lottie
+
+struct LottieView: UIViewRepresentable {
+    func makeUIView(context: UIViewRepresentableContext<LottieView>) -> some UIView {
+        let view = UIView(frame: .zero)
+        
+        let animationView = LottieAnimationView()
+        let animation = LottieAnimation.named("success")
+        animationView.animation = animation
+        animationView.contentMode = .scaleAspectFit
+        animationView.play()
+        
+        animationView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(animationView)
+        
+        NSLayoutConstraint.activate([
+            animationView.heightAnchor.constraint(equalTo: view.heightAnchor),
+            animationView.widthAnchor.constraint(equalTo: view.widthAnchor)
+        ])
+        
+        return view
+    }
+    
+    func updateUIView(_ uiView: UIViewType, context: Context) {
+        
+    }
+}
+```
+
+ContentView.swift
+
+```swift
+struct ContentView: View {
+    var body: some View {
+        LottieView()
+    }
+```
+
+
