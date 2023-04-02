@@ -659,3 +659,21 @@ struct ContentView: View {
         }
     }
  ```
+ 
+ 
+ <img width="300" alt="スクリーンショット 2023-04-02 19 51 32" src="https://user-images.githubusercontent.com/47273077/229348393-525a6cda-37c7-4194-a04e-5fd39030b510.png">
+
+```swift
+struct ContentView: View {
+    var body: some View {
+        ScrollView {
+            LazyVGrid(columns:Array(repeating: .init(.flexible()), count: 4), spacing: 16) {
+                ForEach(0 ..< 12) { item in
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.blue)
+                        .frame(height: 100)
+                }
+            }
+            .padding()
+        }
+```
